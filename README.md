@@ -6,7 +6,67 @@ npm create vite@latest
 
 npm install tailwindcss @tailwindcss/vite
 
+```
 
+## Options ui.shadcn.com
+
+``` tsconfig.json
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+```
+
+``` tsconfig.app.json
+{
+  "compilerOptions": {
+    // ...
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+    // ...
+  }
+}
+```
+
+``` vite.config.ts
+import path from "path"
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+})
+```
+
+``` Run the CLI
+npx shadcn@latest init
+npx shadcn@latest add button
+
+
+import { Button } from "@/components/ui/button"
+
+function App() {
+  return (
+    <div className="flex min-h-svh flex-col items-center justify-center">
+      <Button>Click me</Button>
+    </div>
+  )
+}
+
+export default App
 ```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
