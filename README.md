@@ -75,7 +75,9 @@ npm i react-hook-form
 npm i @hookform/resolvers zod
 npm i sonner
 npx shadcn@latest add sonner
-npx shadcn@latest add button card input
+npx shadcn@latest add button card input 
+npx shadcn@latest add input-group
+npx shadcn@latest add field
 
 ```
 
