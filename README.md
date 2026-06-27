@@ -69,6 +69,17 @@ function App() {
 export default App
 ```
 
+## Working React Hook Forms
+```
+npm i react-hook-form
+npm i @hookform/resolvers zod
+npm i sonner
+npx shadcn@latest add sonner
+npx shadcn@latest add button card input
+
+```
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
